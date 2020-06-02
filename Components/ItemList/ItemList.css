@@ -1,0 +1,19 @@
+.item-list {
+  padding: 10px 20px;
+}
+
+.item-list h2 {
+  text-align: center;
+}
+
+.item-list .buttons {
+  margin: 10px 0;
+}
+
+.item-list ul {
+  text-align: center;
+}
+
+.item-list li {
+  padding: 3px 0;
+}
