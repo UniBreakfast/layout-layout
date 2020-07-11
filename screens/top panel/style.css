@@ -1,0 +1,15 @@
+body, input, button {
+  font: 20px Trebuchet MS, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: #f6f6f6;
+}
+
+header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}

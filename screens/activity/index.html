@@ -13,17 +13,26 @@
     Делать то-то так-то, столько-то <br>
     Сложность: такая-то <button>Взять квест</button>
     <div>
-      <button>Уточнить действие</button> <button>Удалить</button>
+      <button onclick="location.href='/screens/add edit activity'">
+        Уточнить действие
+      </button>
+      <button onclick="location.href='/screens/activities'">Удалить</button>
     </div>
     Способствует в стремлениях:
-    <ul id="endeavors">
+    <ul id="endeavors" onclick="if (event.target!=this)
+      location.href='/screens/endeavor'">
+
       <li>Sit dui fringilla, ligula vigoro</li>
       <li>Metus spero sagittis orci</li>
       <li>Cras perpetum habitasse ac vici faucibus curabitur morbi</li>
     </ul>
     <div>
-      <button>Связать существующее</button>
-      <button>Создать связанное</button>
+      <button onclick="location.href='/screens/endeavors'">
+        Связать существующее
+      </button>
+      <button onclick="location.href='/screens/add edit endeavor'">
+        Создать связанное
+      </button>
     </div>
   </div>
 </body>

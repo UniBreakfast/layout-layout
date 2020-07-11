@@ -1,5 +1,5 @@
 x = 40
-delay = 200
+delay = 20
 
 lis = makeArr(x, ()=> lorem.sentence().slice(0, -1))
   .map(endeavor => `<li>${endeavor}</li>`)
