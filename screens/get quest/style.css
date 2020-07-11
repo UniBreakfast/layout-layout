@@ -1,0 +1,51 @@
+body, input, button {
+  font: 20px Trebuchet MS, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  background: #f6f6f6;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+}
+
+main>div {
+  margin: auto;
+  text-align: center;
+}
+
+main>div>* {
+  margin: 10px;
+}
+
+input {
+  text-align: center;
+  width: 70%;
+}
+
+[type="number"] {
+  width: 60px;
+}
+
+[type="date"] {
+  width: 165px;
+}
+
+.blockRow {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blockRow>* {
+  margin: 5px;
+}
+
+.hidden {
+  display: none;
+}

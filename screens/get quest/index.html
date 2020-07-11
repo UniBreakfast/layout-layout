@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/screens/top panel/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/screens/top panel/script.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      Ты решаешь
+      <div class="blockRow">
+        <div>Делать то-то столько-то</div>
+        <div>(сложность: такая-то)</div>
+      </div>
+      <div class="blockRow">
+        <div>Начиная с <input type="date"></div>
+        <div>и до <input type="date"></div>
+      </div>
+      <div class="blockRow">
+        <div>Всего <input type="number" min="1" max="999"> дней, </div>
+        <div>
+          с залогом <input type="number" min="1" max="999">
+          <button onclick="toggleFora()">...</button>
+        </div>
+      </div>
+      <div class="blockRow hidden">
+        <div>Всего <input type="number" min="1" max="999"> дней, </div>
+        <div>
+          с ценой квеста <input type="number" min="1" max="999">
+          <button onclick="toggleFora()">...</button> ,
+        </div>
+      </div>
+      <div class="blockRow hidden">
+        <div>но с форой <input type="number" min="1" max="999"> дней </div>
+        <div>залог получается <input type="number" min="1" max="999"></div>
+      </div>
+      <div class="blockRow">
+        <button>Взять квест</button>
+        <button onclick="location.href='/screens/activity'">
+          в другой раз
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
