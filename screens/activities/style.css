@@ -6,12 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   display: flex;
-  flex-flow: column;
   background: #f6f6f6;
-}
-
-main {
-  height: 88%;
 }
 
 main>div {

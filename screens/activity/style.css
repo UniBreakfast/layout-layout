@@ -9,12 +9,16 @@ body {
   background: #f6f6f6;
 }
 
-body>div {
+main {
+  display: flex;
+}
+
+main>div {
   margin: auto;
   text-align: center;
 }
 
-body>div>* {
+main>div>* {
   margin: 20px;
 }
 
