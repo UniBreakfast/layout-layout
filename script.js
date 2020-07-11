@@ -1,13 +1,19 @@
 var slot = document.querySelector('.component-slot')
 
-Promise.all([
-  fetch('Components/ItemList/ItemList.html').then(r => r.text()),
-  ...['base.css', 'ItemList.css', 'custom.css'].map(filename =>
-    fetch('Components/ItemList/'+filename).then(r => r.text()).then(css => {
+loadComponent('ItemList', slot)
+
+function loadComponent(name, slot) {
+  return Promise.all([
+    fetch(`Components/${name}/${name}.html`).then(r => r.text()),
+    Promise.all(['base.css', name+'.css', 'custom.css']
+      .map(filename => fetch(`Components/${name}/`+filename)
+        .then(r => r.ok? r.text() : '')
+      )
+    ).then(cssAll => Promise.all(cssAll.map(css => {
       const style = document.createElement('style')
       style.innerHTML = css
       document.head.append(style)
       return new Promise(resolve => style.onload = resolve)
-    })
-  )
-]).then(([html])=> slot.innerHTML = html)
+    })))
+  ]).then(([html])=> slot.innerHTML = html)
+}

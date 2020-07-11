@@ -1,0 +1,34 @@
+body, input, button {
+  font: 20px Trebuchet MS, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  background: #f6f6f6;
+}
+
+body>div {
+  margin: auto;
+  text-align: center;
+}
+
+body>div>* {
+  margin: 10px;
+}
+
+input {
+  text-align: center;
+  width: 70%;
+}
+
+.buttons {
+  border: 1px solid #999;
+  padding: 5px;
+  background: #ccc;
+}
+
+.buttons>button {
+  margin: 5px;
+}

@@ -1,3 +1,23 @@
 .item-list {
   background: #ff8331;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.item-list h2 {
+  background: #210;
+  color: #fde;
+  border-radius: 5px 5px 0 0;
+}
+
+.item-list .buttons {
+  padding: 8px 1px;
+}
+
+.item-list .buttons * {
+  margin: 0 4px;
+}
+
+.item-list li {
+
 }
