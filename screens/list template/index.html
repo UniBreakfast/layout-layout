@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/screens/top panel/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/rnd/stuff.js"></script>
+  <script src="/rnd/partials.js"></script>
+  <script src="/rnd/rnd.js"></script>
+  <script src="/rnd/utilitary.js"></script>
+  <script src="/screens/top panel/script.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      <button onclick="location.href='/screens/add element'">
+        Добавить элемент
+      </button>
+      <div class="wrapper">
+        <ul id='elements' onclick="if (event.target!=this)
+          location.href='/screens/element'">
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

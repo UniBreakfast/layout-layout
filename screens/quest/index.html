@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/screens/top panel/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/screens/top panel/script.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      <div>
+        Квест: Делать то-то столько-то
+        <button onclick="location.href='/screens/activity'">...</button>
+      </div>
+      <div class="blockRow">
+        <div>с 2020-07-04 по 2020-07-11</div>
+        <div>(4 из 8 дней позади)</div>
+      </div>
+      <div class="blockRow">
+        <div>Залог 24 (2 дня форы), уже заработано 5,</div>
+        <div>при выполнении будет возмещено 30</div>
+      </div>
+      <div class="wrapper">
+        <ul id='days' onclick="if (event.target!=this)
+          location.href='/screens/day'">
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+body, input, button {
+  font: 20px Trebuchet MS, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  background: #f6f6f6;
+}
+
+main {
+  height: 88%;
+}
+
+main>div {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  /* align-content: center; */
+}
+
+li {
+  max-width: 300px;
+  margin: 5px 10px;
+  border: 1px solid grey;
+}
+
+
+.wrapper {
+  height: 93%;
+  width: 100%;
+  overflow: auto;
+}

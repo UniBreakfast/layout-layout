@@ -1,10 +1,10 @@
-x = 40
-delay = 20
+const x = 40
+const delay = 20
 
-lis = makeArr(x, ()=> lorem.sentence().slice(0, -1))
+const lis = makeArr(x, ()=> lorem.sentence().slice(0, -1))
   .map(endeavor => `<li>${endeavor}</li>`)
 
-interval = setInterval(()=> {
+const interval = setInterval(()=> {
   endeavors.innerHTML += lis.pop()
   switchAlignContent()
 }, delay)
