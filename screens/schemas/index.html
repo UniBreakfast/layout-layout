@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/screens/top panel/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/screens/top panel/script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      <div>
+        <button onclick="location.href='/screens/add schema'">
+          Другая периодичность
+        </button>
+        <button>Переименование</button> <button>Удаление</button>
+      </div>
+      <div class="wrapper">
+        <ul onclick="if (event.target!=this)
+          location.href='/screens/add edit activity'">
+
+          <li>ежедневно</li>
+          <li>через день</li>
+          <li>день через два</li>
+          <li>раз в неделю</li>
+          <li>дважды в неделю</li>
+          <li>трижды в неделю</li>
+          <li>по будням</li>
+          <li>понедельник, среда, пятница</li>
+          <li>каждый четверг</li>
+          <li>можно пропуск через день</li>
+          <li>1-3 пропуска к каждым четырём выполнениям</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

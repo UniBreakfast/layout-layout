@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 5px;
+  font: 20px Trebuchet MS;
+}
+
+pre {
+  margin: 0;
+  text-align: left;
+}
+
+button {
+  font: 20px Trebuchet MS;
+  margin: 2px;
+  border: 1px solid;
+}
+
+button:hover {
+  box-shadow: 0 0 2px 2px orange;
+}
+
+textarea {
+  display: block;
+  height: 150px;
+  width: 400px;
+}
+
+#schemaBtns {
+  display: flex;
+  overflow: auto;
+}
+
+#schemaBtns button {
+  font-size: 14px;
+}
+
+#calendar {
+}
+
+.odd {
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.even {
+
+}
+
+.planned {
+  background: #cff;
+}
