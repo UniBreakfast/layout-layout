@@ -21,8 +21,6 @@ button:hover {
 
 textarea {
   display: block;
-  height: 150px;
-  width: 400px;
 }
 
 #schemaBtns {
@@ -32,6 +30,7 @@ textarea {
 
 #schemaBtns button {
   font-size: 14px;
+  border-radius: 10px;
 }
 
 #calendar {
@@ -42,10 +41,10 @@ textarea {
   border-width: 2px;
 }
 
-.even {
-
-}
-
 .planned {
   background: #cff;
+}
+
+.planned.even {
+  background: rgb(171, 228, 228);
 }
