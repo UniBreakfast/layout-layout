@@ -67,7 +67,8 @@ schemaBtns.onkeydown = e => {
       const pre = document.createElement('pre')
       pre.innerText = ta.value
       ta.replaceWith(pre)
-      localStorage.schemas = JSON.stringify([...schemaBtns.querySelectorAll('pre, textarea')].map(el => el.innerText || el.value))
+      storeSchemas()
+      pre.parentNode.focus()
       if (!schemaBtns.firstChild.querySelector('textarea'))
         schemaBtns.prepend(buildEmptySchemaBtn())
       if (!schemaBtns.lastChild.querySelector('textarea'))
@@ -80,27 +81,26 @@ schemaBtns.onkeydown = e => {
     } else if (e.key=='ArrowLeft' && e.ctrlKey
       && ta.parentNode.previousSibling) {
         schemaBtns.insertBefore(ta.parentNode, ta.parentNode.previousSibling)
-        e.preventDefault()
-        ta.focus()
+        e.preventDefault(),  storeSchemas(),  ta.focus()
     } else if (e.key=='ArrowRight' && e.ctrlKey
       && ta.parentNode.nextSibling) {
         schemaBtns.insertBefore(ta.parentNode.nextSibling, ta.parentNode)
-        e.preventDefault()
-        ta.focus()
+        e.preventDefault(),  storeSchemas(),  ta.focus()
     } else fixSize(ta)
   } else {
     const btn = e.target
     if (e.key=='ArrowLeft' && e.ctrlKey && btn.previousSibling) {
       schemaBtns.insertBefore(btn, btn.previousSibling)
-      e.preventDefault()
-      btn.focus()
+      e.preventDefault(),  storeSchemas(),  btn.focus()
     } else if (e.key=='ArrowRight' && e.ctrlKey && btn.nextSibling) {
       schemaBtns.insertBefore(btn.nextSibling, btn)
-      e.preventDefault()
-      btn.focus()
+      e.preventDefault(),  storeSchemas(),  btn.focus()
     }
   }
+}
 
+function storeSchemas() {
+  localStorage.schemas = JSON.stringify([...schemaBtns.querySelectorAll('pre, textarea')].map(el => el.innerText || el.value))
 }
 
 function buildEmptySchemaBtn() {
@@ -136,34 +136,34 @@ function plan(n/* days */, s/* schema */, dayLimit=999) {
   const days = s.days?.length? s.days : [0,1,2,3,4,5,6]
   dateObj = new Date('2020')
   dodays.length = 0
-  let i = 0
+  let i = 0,  shift = 0
   if (s.days) {
+    const doLength = s.do || days.length
+    if (!s.do && dateObj.getDay()-1) {
+      const weekday = (dateObj.getDay()+6)%7
+      shift = days.filter(day => day<weekday).length
+    }
     while (dodays.length < n && dayLimit--) {
       const [day, mon, date, year] = dateObj.toString().split(' ')
       const month = String(dateObj.getMonth() + 1).padStart(2, 0)
       const weekday = (dateObj.getDay()+6)%7
-      if (days.includes(weekday))
-        if (s.skip)
-          if (s.do) ;
-          else
-            if (days.length-days.indexOf(weekday) > s.skip)
-              dodays.push(`${year}-${month}-${date}`)
-            else;
-        else dodays.push(`${year}-${month}-${date}`)
-
-
-
+      const j = (i+shift)%doLength
+      if (days.includes(weekday)) {
+        dodays.push(new DoDay(`${year}-${month}-${date}`,
+          i, (i+shift)/doLength|0, j))
+        i++
+      }
       dateObj.setDate(dateObj.getDate()+1)
     }
   } else if (s.dates) {
 
   } else {
     let rest = 0,  breaks = 0
+    const doLength = s.do || 1
     while (dodays.length < n && dayLimit--) {
       const [day, mon, date, year] = dateObj.toString().split(' ')
       const month = String(dateObj.getMonth() + 1).padStart(2, 0)
       const weekday = (dateObj.getDay()+6)%7
-      const doLength = s.do || 1
       const j = i%doLength
       if (i && !j) {
         if (breaks < s.breaks) breaks++
