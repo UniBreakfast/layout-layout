@@ -46,5 +46,49 @@ textarea {
 }
 
 .planned.even {
-  background: rgb(171, 228, 228);
+  background: #abe4e4;
+}
+
+.do {
+  background: #c2feb2;
+}
+
+.do.even {
+  background: #a6dba1;
+}
+
+.done {
+  background: #63e957;
+}
+
+.done.even {
+  background: #56b83e;
+}
+
+.break {
+  background: #d2fcfc;
+}
+
+.didbreak {
+  background: #42fdfd;
+}
+
+.rest {
+  background: #aae0f8;
+}
+
+.rested {
+  background: #31beff;
+}
+
+.skipped {
+  background: #ffccbc;
+}
+
+.do.final {
+  background: #fdff85;
+}
+
+.done.final {
+  background: #f3ff50;
 }
