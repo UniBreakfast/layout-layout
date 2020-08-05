@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/screens/top panel/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/screens/top panel/script.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div>
+      Новая схема регулярности
+      <div class="blockRow" id="boundBtns" onclick="handleBoundBtns(event)">
+        С привязкой
+        <button class="pressed" id=daysBtn>к дням недели</button>
+        <button id=datesBtn>к числам месяца</button>
+        <button id=unboundBtn>без привязки</button>
+      </div>
+      <div id=boundDivs>
+        <div id="daysDiv">
+          <div class="blockRow" id=daysBtns>
+            <button>Пн</button>
+            <button>Вт</button>
+            <button>Ср</button>
+            <button>Чт</button>
+            <button>Пт</button>
+            <button>Сб</button>
+            <button>Вс</button>
+          </div>
+          <div id="daysGroupLenDiv"
+            onclick="handleToggleDiv(event, this, switchBreakName)">
+            <div class="blockRow" hidden>
+              <div>Выполнений в серии
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>серия = неделя</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>Серия - календарная неделя
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+          <div id="daysBreaksDiv" onclick="handleToggleDiv(event, this)">
+            <div class="blockRow" hidden>
+              <div>
+                <span class="breaks">перерывов</span> в серии
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без <span class="breaks">перерывов</span></button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                Без <span class="breaks">перерывов</span> в серии
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="datesDiv" hidden>
+          <div id=datesBtns>
+            <div class="blockRow">
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>7</button>
+              <button>8</button>
+            </div>
+            <div class="blockRow">
+              <button>9</button>
+              <button>10</button>
+              <button>11</button>
+              <button>12</button>
+              <button>13</button>
+              <button>14</button>
+              <button>15</button>
+              <button>16</button>
+            </div>
+            <div class="blockRow">
+              <button>17</button>
+              <button>18</button>
+              <button>19</button>
+              <button>20</button>
+              <button>21</button>
+              <button>22</button>
+              <button>23</button>
+              <button>24</button>
+            </div>
+            <div class="blockRow">
+              <button>25</button>
+              <button>26</button>
+              <button>27</button>
+              <button>28</button>
+              <button>29</button>
+              <button>30</button>
+              <button>31</button>
+              <button style="visibility:hidden">32</button>
+            </div>
+          </div>
+          <div id="datesGroupLenDiv"
+            onclick="handleToggleDiv(event, this, switchBreakName)">
+            <div class="blockRow" hidden>
+              <div>Выполнений в серии
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>серия = месяц</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>Серия - календарный месяц
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+          <div id="datesBreaksDiv" onclick="handleToggleDiv(event, this)">
+            <div class="blockRow" hidden>
+              <div>
+                <span class="breaks">перерывов</span> в серии
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без <span class="breaks">перерывов</span></button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                Без <span class="breaks">перерывов</span> в серии
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="unboundDiv" hidden>
+          <div class="blockRow">
+            <div>Выполнений в серии
+              <input type="number" class="groupLenInp" min="1" max="999">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
