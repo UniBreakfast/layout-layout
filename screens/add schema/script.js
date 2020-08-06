@@ -34,7 +34,7 @@ function switchSkipWords(e, parent) {
   const spans = parent.previousElementSibling.querySelectorAll('.skip')
   const earn = parent.firstElementChild.hidden
   spans[0].innerText =
-    earn? "С правом на пропуски" : "С правом на максимум пропусков"
+    earn? "С правом на пропуски" : "Лимит пропусков в запасе"
   spans[1].innerText =
     earn? "Без права на пропуск" : "С правом заработать пропуски"
 }

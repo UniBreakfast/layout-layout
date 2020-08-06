@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User case 3</title>
+  <script src="burgers.js"></script>
+</head>
+<body>
+  <button id="burgerBtn">menu</button>
+
+  <script>
+    const burgerOptions = {side: 'left', speed: 200}
+    const burgerItems = {
+      "Home": '#',
+      "Products": '#',
+      "Support": openSupportPane,
+      "About Us": '#',
+      "Contacts": '#',
+    }
+    function openSupportPane() {
+      console.log('support pane opened')
+    }
+    const burgerMenu = makeBurgerMenu('#burgerBtn', burgerOptions)
+  </script>
+</body>
+</html>

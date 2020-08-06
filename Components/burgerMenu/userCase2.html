@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User case 2</title>
+  <script src="burgers.js"></script>
+</head>
+<body>
+  <button id="burgerBtn">menu</button>
+  <nav id="burgerMenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const burgerOptions = {side: 'rigth', speed: 400}
+    const burgerMenu =
+      makeBurgerMenu('#burgerBtn', '#burgerMenu', burgerOptions)
+  </script>
+</body>
+</html>
