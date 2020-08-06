@@ -15,9 +15,26 @@ function handleToggleDiv(e, parent, cb) {
   }
 }
 
-function switchBreakName(e, parent) {
+function switchNaming(e, parent) {
   const breakName =
     parent.firstElementChild.hidden? "перерывов" : "откладываний"
   parent.nextElementSibling.querySelectorAll('.breaks')
     .forEach(span => span.innerText = breakName)
+  parent.nextElementSibling.nextElementSibling.querySelector('.rest')
+    .innerText = parent.firstElementChild.hidden? parent==daysDiv?
+      "недель" : "месяцев" : "дней"
+}
+
+function switchEarnWords(e, parent) {
+  parent.nextElementSibling.querySelector('.earn').innerText =
+    parent.firstElementChild.hidden? "и заслужить его нельзя" : "раз за серию"
+}
+
+function switchSkipWords(e, parent) {
+  const spans = parent.previousElementSibling.querySelectorAll('.skip')
+  const earn = parent.firstElementChild.hidden
+  spans[0].innerText =
+    earn? "С правом на пропуски" : "С правом на максимум пропусков"
+  spans[1].innerText =
+    earn? "Без права на пропуск" : "С правом заработать пропуски"
 }

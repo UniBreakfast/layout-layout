@@ -33,7 +33,7 @@
             <button>Вс</button>
           </div>
           <div id="daysGroupLenDiv"
-            onclick="handleToggleDiv(event, this, switchBreakName)">
+            onclick="handleToggleDiv(event, this, switchNaming)">
             <div class="blockRow" hidden>
               <div>Выполнений в серии
                 <input type="number" class="groupLenInp" min="1" max="999">
@@ -61,6 +61,55 @@
               </div>
             </div>
           </div>
+          <div id="daysRestDiv" onclick="handleToggleDiv(event, this)">
+            <div class="blockRow" hidden>
+              <div>
+                <span class="rest">недель</span> отдыха между сериями
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без отдыха</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                Без отдыха между сериями
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+          <div id="daysSkipDiv"
+            onclick="handleToggleDiv(event, this, switchEarnWords)">
+            <div class="blockRow" hidden>
+              <div>
+                <span class="skip">С правом на пропуски</span>
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                <span class="skip">Без права на пропуск</span>
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+          <div id="daysEarnDiv"
+            onclick="handleToggleDiv(event, this, switchSkipWords)">
+            <div class="blockRow" hidden>
+              <div>
+                по одному за каждые
+                <input type="number" class="groupLenInp" min="1" max="999">
+                выполнений
+                <button>иначе</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                <span class="earn">и заслужить его нельзя</span>
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+
 
         </div>
         <div id="datesDiv" hidden>
@@ -107,7 +156,7 @@
             </div>
           </div>
           <div id="datesGroupLenDiv"
-            onclick="handleToggleDiv(event, this, switchBreakName)">
+            onclick="handleToggleDiv(event, this, switchNaming)">
             <div class="blockRow" hidden>
               <div>Выполнений в серии
                 <input type="number" class="groupLenInp" min="1" max="999">
@@ -135,6 +184,21 @@
               </div>
             </div>
           </div>
+          <div id="datesRestDiv" onclick="handleToggleDiv(event, this)">
+            <div class="blockRow" hidden>
+              <div>
+                <span class="rest">месяцев</span> отдыха между сериями
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без отдыха</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                Без отдыха между сериями
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
 
         </div>
         <div id="unboundDiv" hidden>
@@ -143,6 +207,37 @@
               <input type="number" class="groupLenInp" min="1" max="999">
             </div>
           </div>
+          <div id="unboundBreaksDiv" onclick="handleToggleDiv(event, this)">
+            <div class="blockRow" hidden>
+              <div>
+                откладываний в серии
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без откладываний</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                Без откладываний в серии
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+          <div id="unboundRestDiv" onclick="handleToggleDiv(event, this)">
+            <div class="blockRow" hidden>
+              <div>
+                дней отдыха между сериями
+                <input type="number" class="groupLenInp" min="1" max="999">
+                <button>без отдыха</button>
+              </div>
+            </div>
+            <div class="blockRow">
+              <div>
+                Без отдыха между сериями
+                <button>иначе</button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
