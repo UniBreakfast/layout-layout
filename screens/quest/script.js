@@ -12,7 +12,8 @@ const items = [...Array(x).keys()].map((dateShift, i) => {
     const day = date.getDay()
     const diff = date / 864e5 - today
     const prefix = diff in theseDays? theseDays[diff]+', ' : ''
-    return `<li>${i<4? '<s>':''}${prefix}${dayNum}, ${weekdays[day]}${i<4? '<s>':''}</li>`
+    return `<li>${i<4? '<s>':''}${prefix}${dayNum}, ${weekdays[day]}${i<4?
+      '</s>':''}</li>`
 })
 
 const interval = setInterval(()=> {
@@ -20,7 +21,7 @@ const interval = setInterval(()=> {
   switchAlignContent()
 }, delay)
 
-setTimeout(()=> clearInterval(interval), delay*x)
+setTimeout(()=> clearInterval(interval), delay*(x+3))
 
 function switchAlignContent() {
   days.style.alignContent =
