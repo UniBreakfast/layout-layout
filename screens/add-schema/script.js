@@ -9,7 +9,7 @@ function handleBoundBtns(e) {
 }
 
 function handleToggleDiv(e, parent, cb) {
-  if (e.path.some(el => el.tagName == 'BUTTON')) {
+  if (e.composedPath().some(el => el.tagName == 'BUTTON')) {
     for (const div of parent.children) div.hidden = !div.hidden
     if (cb) cb(e, parent)
   }
